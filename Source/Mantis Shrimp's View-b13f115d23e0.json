@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mantis-shrimps-view",
+  "private_key_id": "b13f115d23e0dfb84fb7072cbbf870f530e02c32",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCyWwfKsW3hI6v7\nyPJoGrzgWUhPSebeXzGE8oHgCt0AV+kxLD0t15CijI+kXh4oqSw4DpaYS18NrFsT\nZ8ryI0+jOOW00JKrkKhkvseESxVqGrax4Mez7N0B6iOqJq9LUShpaVbOFxoPRaUe\nR+r4ufh6m8J02ky2LKMXWzBsZiacvIj5ivkFBGjOMlJQBk/vVRuXJ3jrJ8d+8z2J\nQi03IuzCivcLdvEkaqCxOYz/C35RN+ahiC7IGd52igmXBU3FoNEYJ3XFeO36ygj6\n2iR5yDIpkbnyufiscIZMPv6stmC1mnz3QUBtC6t7FV3HY2EjGjkQyTRmpS1eNov3\nIoFq6XZdAgMBAAECggEAIj6itBsVoRr3iFhInM73cW8LGHg0zQEDkcZ7Q9BqJwj6\nE/Atzfm8Ak3RPaq5iS6UOC4q4ZJlLYuokAUHfS7k+U6xIiLC6pCTmIZd6gt9kNoQ\ntn4Vcfk6ZQX285JKaYBrbTPl0Bu06/ZAEhyWY8vXRvlVoJiSjo7rAI7IcSO66bBi\nWN6N8t4RR6SKbzHILNGkDlTkXN2ugQZLMmF4ejgXgPq19xJUO/Kxx98G3AH8XrRm\nXMQV8lUcTnArLSSNWGuX98bxy07Ys0oLCldPoL062Cd8KHUavWv1LTRsypjAVF9F\nE0SZMqu06OjqANvIfdSlDUa0K7cyekHeq7kN2/cO0QKBgQDbzJc3ypjTQjRaOaQt\nR+40PC+Dnrk1/ai+E8O/uuA+KfaUGPB2LolbdUJOxGQtYjOk1pdwAK0pVc+vno7u\nf4Pn+WdRIpkSeBFq8WH4fDfiloghgCXeYAkgGKZl+aLFbKXi3cLTdG4w5DqDJDNj\nT/tnqfW6yyGJ2zxPsvYfDbyj7QKBgQDPuwzk5heJu4pzkEnOVYTiR6r0k3/b2EH5\nX/x+y3HpjtsN5YEBqn1hHXP0jk2cCqyxYQSOc8mGyYL0w/vzCBA8/4DQdfYJszeu\nskfuOToUNiH3ifl1ytDIIbDbfXZ+F9tpU/SRIMbzEnjBLlFViFn/WKQIYG5uRBH+\ngjgz5Y+uMQKBgCgC1DwpuywpzxHlkEdV4rzLf/K7wAdeB4uiWW3bfNqUFPjcmVlK\nG2L0s39XLM0+JRyKm8KdvOfbYRUdDfPIbqCZu/7/B1JfXPxUuHrdUecDdAB1LW+P\nl9mp4xCJIuJBZuknaUHI3g40XZplypz3gFJclAjO1Woc6JuxfjAk9gP5AoGADNWA\noW+5yo+kqSkj9jSAZj6JSF0IjDubL94HSoolOonR7NTeGI1A+8wHCvfzwY1DSB43\nWtm6fLJcfeTR3x0Da9FZUwfGsKi66vcmzIgKl48UoCeNGwLxzTuPoq/orzeoHaTL\nOmAtCn18qmrDKaan8Me4MrBKglOATRocgNBRBTECgYBM4OEstBZmgcEE/eCi/ROY\nErpP5o04yt9XGF56WyJgO0bL1QDe1bq6+QLWY7+ktAf1b9gKKqtMCUr2QycALHiY\n4kK2XlJIuwkIYqBZmSYYX2khL8OzvZNryQOXNeSwvAA7RnKTP2HgPzlGEVOESEVU\nWBYvcpYSaIn5jNGOPlD6gQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-fmdbodyob5my@mantis-shrimps-view.iam.gserviceaccount.com",
+  "client_id": "113120891019089253260",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-fmdbodyob5my%40mantis-shrimps-view.iam.gserviceaccount.com"
+}
