@@ -74,19 +74,29 @@ for tweet_item in tweet_items:
     from_user = ""
     time = ""
     tweet_text = ""
+    lang = ""
     try:
-        from_user = tweet_item.find_element_by_class_name('FullNameGroup').text.encode('utf-8')
-        time = tweet_item.find_element_by_class_name('time').text.encode('utf-8').split('\n')[0]
-        tweet_text = tweet_item.find_element_by_class_name('tweet-text').text.encode('utf-8')
-        lang = tweet_text.get_attribute()
-    except:
+        from_user = get_child_by_class(tweet_item, 'FullNameGroup').text.encode('utf-8')
+        time = get_child_by_class(tweet_item, 'time').text.encode('utf-8').split('\n')[0]
+        tweet_text_container = get_child_by_class(tweet_item, 'tweet-text')
+        tweet_text = tweet_text_container.text.encode('utf-8')
+        lang = tweet_text_container.get_attribute("lang")
+    except common.exceptions.NoSuchElementException:
         from_user = ""
         time = ""
         tweet_text = ""
+    finally:
+        if lang == "en":
+            malespeaker.speak(from_user + " tweeted " + time + " ago")
+            malespeaker.speak(tweet_text)
 
-    malespeaker.speak(from_user + " tweeted " + time + " ago")
-    malespeaker.speak(tweet_text)
-
+def get_child_by_class(container, class_name):
+    elem = None
+    try:
+        elem = container.find_element_by_class_name(class_name)
+    except:
+        pass
+    return elem
 
 def save_session():
     cookies = browser.get_cookies()
