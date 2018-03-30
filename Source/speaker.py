@@ -1,5 +1,4 @@
 from threading import Thread
-from Queue import Queue
 import malespeaker
 import pythoncom
 import textwrap
@@ -8,7 +7,6 @@ MAX_WORDS = 5
 
 def break_the_line(iterable, n = 1):
     current_batch = []
-    print "inside iterable"
     for item in iterable:
         current_batch.append(item)
         if len(current_batch) == n:
@@ -17,23 +15,39 @@ def break_the_line(iterable, n = 1):
     if current_batch:
         yield current_batch
 
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def empty(self):
+        return self.items == []
+
+    def put(self, item):
+        self.items.insert(0,item)
+
+    def get(self):
+        return self.items.pop()
+
+    def size(self):
+        return len(self.items)
+
 class Speaker():
     def __init__(self):
-        self.queue = Queue(maxsize=100)
+        self.queue = Queue()
         self.speaker = wincl.Dispatch("SAPI.SpVoice")
         self.thread = Thread(target=self.run)
         self.thread.start()
 
     def speak(self, text):
         words = text.split()
-        self.stop()
 
+        self.stop()
         for line in break_the_line(words, MAX_WORDS):
-            print "putting to queue", (' '.join(line))
+            #print("putting", ' '.join(line))
             self.queue.put(' '.join(line))
 
     def stop(self):
-        self.queue.queue.clear()
+        self.queue = Queue()
 
     def run(self):
         pythoncom.CoInitialize()
@@ -42,10 +56,9 @@ class Speaker():
                 continue
 
             text = self.queue.get()
+            #print("speaking", text)
             if len(text) > 0:
                 self.speaker.speak(text)
-
-            self.queue.task_done()
 
 def tests():
     # This should interrupt the speaker in between speaking the first line
@@ -53,7 +66,6 @@ def tests():
     speaker = Speaker()
 
     for line in lines:
-        print "Speaking"
         speaker.speak(line)
 
 speaker = Speaker()
