@@ -38,10 +38,15 @@ class Speaker():
         self.thread = Thread(target=self.run)
         self.thread.start()
 
-    def speak(self, text):
-        words = text.split()
+    def speak(self, text, sync=False):
+        while(sync and not self.queue.empty()):
+            continue
 
-        self.stop()
+        if(sync):
+            self.speaker.speak(text)
+            return self.speaker.waitUntilDone(-1)
+
+        words = text.split()
         for line in break_the_line(words, MAX_WORDS):
             #print("putting", ' '.join(line))
             self.queue.put(' '.join(line))
@@ -67,6 +72,9 @@ def tests():
 
     for line in lines:
         speaker.speak(line)
+
+    speaker.speak("this is synchrnuous", True)
+    print("Done")
 
 speaker = Speaker()
 
