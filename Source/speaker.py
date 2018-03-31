@@ -65,6 +65,9 @@ class Speaker():
             if len(text) > 0:
                 self.speaker.speak(text)
 
+    def isSpeaking(self):
+        return not self.queue.empty()
+
 def tests():
     # This should interrupt the speaker in between speaking the first line
     lines = ["hi there, this is a long line to speak I am speaking to myself", "I hate interruptions"]
