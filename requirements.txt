@@ -12,7 +12,7 @@ gTTS-token==1.1.1
 httplib2==0.10.3
 idna==2.6
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 kivy.deps.glew==0.1.9
 kivy.deps.sdl2==0.1.17
 MarkupSafe==1.0
